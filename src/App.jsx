@@ -1,11 +1,9 @@
-import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 import CompoClase from './compoClass'
+import CompoHook from './compoHook'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
       <div>
@@ -14,18 +12,18 @@ function App() {
         </a>
       </div>
       <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      <CompoClase propA='soy una prop'>
-        <h3>children-1</h3>
-        <h3>children-2</h3>
+      <hr/>
+      <h2>Componente tipo class</h2>
+      <CompoClase propA='soy una prop->A'>
+        <h4>children-1</h4>
+        <h4>children-2</h4>
       </CompoClase>
+      <hr/>
+      <h2>Componente tipo Hook</h2>
+      <CompoHook propA='soy una prop->A'>
+        <h4>children-1</h4>
+        <h4>children-2</h4>
+        </CompoHook>
     </>
   )
 }
